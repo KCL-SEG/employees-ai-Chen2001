@@ -12,16 +12,16 @@ class Employee:
             if len(self.data)==1:
                 total=self.data[0]
             if len(self.data)==2:
-                total=args[0]+args[1]
+                total=self.data[0]+self.data[1]
             if len(self.data)==3:
-                total=args[0]+args[1]*args[2]
+                total=self.data[0]+self.data[1]*self.data[2]
         elif self.contract=="hourly":
             if len(self.data)==2:
                 total=self.data[0]*self.data[1]
             if len(self.data)==3:
-                total=args[0]*args[1]+self.data[2]
+                total=self.data[0]*self.data[1]+self.data[2]
             if len(self.data)==4:
-                total=args[0]*args[1]+args[2]*args[3]
+                total=self.data[0]*self.data[1]+self.data[2]*self.data[3]
         self.total=total
         return total
     def __str__(self):
